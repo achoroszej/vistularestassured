@@ -15,16 +15,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.greaterThan;
 
-public class InformationControllerTest extends RestAssuredTest {
-
-    @Test
-    public void shouldGetAll() {
-        given().get("/information")
-                .then()
-                .log().all()
-                .statusCode(200)
-                .body("size()", is(2));
-    }
+public class ZadanieDomowe {
 
     @Test
     public void shouldCreateNewItem() {
@@ -52,14 +43,6 @@ public class InformationControllerTest extends RestAssuredTest {
         assertThat(information.getSalary()).isEqualTo(salary);
 
         given().delete("/information/"+id)
-                .then()
-                .log().all()
-                .statusCode(204);
-    }
-
-    @Test
-    public void shouldDeleteItem() {
-        given().delete("/information/15")
                 .then()
                 .log().all()
                 .statusCode(204);
