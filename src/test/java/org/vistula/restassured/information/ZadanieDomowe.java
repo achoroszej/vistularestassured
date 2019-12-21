@@ -1,8 +1,5 @@
 package org.vistula.restassured.information;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
-import io.restassured.response.ExtractableResponse;
-import io.restassured.response.Response;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.json.JSONObject;
 import org.junit.Test;
@@ -11,11 +8,8 @@ import org.vistula.restassured.pet.Information;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-import static io.restassured.RestAssured.get;
 import static org.assertj.core.api.Assertions.assertThat;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.Matchers.greaterThan;
 
 public class ZadanieDomowe extends RestAssuredTest{
 
